@@ -38,17 +38,10 @@ Setting up an Application Load Balancer in AWS Elastic Load Balancer by divide t
    - Syntax will be: http://<ELB DNS>/product?item=securitynumber+OR+1=1--
    - <b>Result</b>: <b>SQL Injection is blockedby WAF before it goes inside the server.</b>
    
-6. Test <b>Query String Parameter</b>
+6. ReTest <b>Query String Parameter</b>
    - We will add the following URL parameter: /?admin=123456
    - Syntax will be: http://<ELB DNS>/?admin=123456
-   - <b>Result</b>: <b>The Query String which contains admin is blocked by WAF before it could go inside the server</b>.
-
-9. Test
-    - By copy the DNS from Load balancer we receive <b>403 Forbidden error</b>
-    - Means that WAF blocked the connectivity from Load balancer
-10. Resolve the Problem
-    - Delete the IP sets
-    - Finally we will got again the response from the two web servers
+   - <b>Result</b>: <b>The Query String which contains admin is blocked by WAF before it could go inside the server</b>
 
  
     
