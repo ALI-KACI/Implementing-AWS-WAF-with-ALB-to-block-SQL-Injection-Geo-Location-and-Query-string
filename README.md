@@ -19,7 +19,7 @@ Setting up an Application Load Balancer in AWS Elastic Load Balancer by divide t
    - Keypair.pem
    - auto-assign public IPV4 address
    - Security groupe web: <b>MyWebserverSG</b>
-   - inbound rule: SSH, HTTP,HTTPs
+   - inbound rule: SSH, HTTP, HTTPs
    - user-data file://apache_install.sh(reference: 1-Launch two EC2 Instances.png)
 2. Create a <b>Target groupe</b> for the <b>Load Balancer</b> to distribute traffic among these <b>instances</b>.(reference: 2-Create a Target groupe.png)
 3. Create <b>Application Load Balancer</b>(reference: 3-Create Application Load Balancer.png)
@@ -29,11 +29,11 @@ Setting up an Application Load Balancer in AWS Elastic Load Balancer by divide t
    
 5. Test <b>SQL Injection</b>
    - We will add the following URL parameter: /product?item=securitynumber+OR+1=1--
-   - Syntax will be: http://<ELB DNS>/product?item=securitynumber+OR+1=1--
+   - Syntax will be: http://ELB DNS/product?item=securitynumber+OR+1=1--
    - <b>Result</b>: <b>SQL Injection went inside the server and it doesn't know how to solve this URL</b>.(reference: 5-Test SQL Injection.png)
 6. Test <b>Query String Parameter</b>
    - We will add the following URL parameter: /?admin=123456
-   - Syntax will be: http://<ELB DNS>/?admin=123456
+   - Syntax will be: http://ELB DNS/?admin=123456
    - <b>Result</b>: <b>The server passes the Query String inside, there is no error the admin parameter becames an unused value</b>.(reference: 6-Test Query String Parameter.png)
      
 7. In <b>WAF & Shield</b> we create a <b>Web ACL</b>
@@ -42,12 +42,12 @@ Setting up an Application Load Balancer in AWS Elastic Load Balancer by divide t
   
 8. ReTest <b>SQL Injection</b>
    - We will add the following URL parameter: /product?item=securitynumber+OR+1=1--
-   - Syntax will be: http://<ELB DNS>/product?item=securitynumber+OR+1=1--
-   - <b>Result</b>: <b>SQL Injection is blockedby WAF before it goes inside the server.</b>(reference: 8-ReTest SQL Injection.png)
+   - Syntax will be: http://ELB DNS/product?item=securitynumber+OR+1=1--
+   - <b>Result</b>: <b>SQL Injection is blocked by WAF before it goes inside the server.</b>(reference: 8-ReTest SQL Injection.png)
    
 9. ReTest <b>Query String Parameter</b>
    - We will add the following URL parameter: /?admin=123456
-   - Syntax will be: http://<ELB DNS>/?admin=123456
+   - Syntax will be: http://ELB DNS/?admin=123456
    - <b>Result</b>: <b>The Query String which contains admin is blocked by WAF before it could go inside the server</b>(reference: 9-ReTest Query String Parameter.png)
 
  
