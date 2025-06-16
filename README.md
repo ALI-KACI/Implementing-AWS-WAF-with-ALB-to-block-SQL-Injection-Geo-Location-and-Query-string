@@ -5,8 +5,9 @@
 
 Setting up an Application Load Balancer in AWS Elastic Load Balancer by divide the incoming traffic to both EC2 Instances (servers) in a Round Robin manner. To prevent access from specific geographical locations, safeguard against SQL injections, and restrict certain Query String parameters. 
 ## Architecture
+![AWS-WAF-with-ALB-to-block-SQL-Injection-Geo-Location-and-Query-string](https://github.com/user-attachments/assets/34fb0487-8f9f-44cf-bee8-7911b895e3d5)
 
-![Uploading AWS-WAF-with-ALB-to-block-SQL-Injection-Geo-Location-and-Query-string.png…]()
+
 
 
 
