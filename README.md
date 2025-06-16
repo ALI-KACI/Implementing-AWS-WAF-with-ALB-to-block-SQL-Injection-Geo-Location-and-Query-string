@@ -4,6 +4,11 @@
 
 
 Setting up an Application Load Balancer in AWS Elastic Load Balancer by divide the incoming traffic to both EC2 Instances (servers) in a Round Robin manner. To prevent access from specific geographical locations, safeguard against SQL injections, and restrict certain Query String parameters. 
+## Architecture
+
+![Architecture](https://github.com/user-attachments/assets/fde74253-d92c-4514-a1ab-a4e9d5f4b35a)
+
+
 
 ### Step-by-Step Implementation
 
