@@ -27,7 +27,7 @@ Setting up an Application Load Balancer in AWS Elastic Load Balancer by divide t
 6. Test <b>Query String Parameter</b>
    - We will add the following URL parameter: /?admin=123456
    - Syntax will be: http://<ELB DNS>/?admin=123456
-   - <b>Result</b>: <b>The server passes the Query String inside, there is no error the admin parameter becames an unused value</b>.(reference: 66-Test Query String Parameter.png)
+   - <b>Result</b>: <b>The server passes the Query String inside, there is no error the admin parameter becames an unused value</b>.(reference: 6-Test Query String Parameter.png)
      
 7. In <b>WAF & Shield</b> we create a <b>Web ACL</b>
    - Add AWS resources: Application load balancer
@@ -41,7 +41,7 @@ Setting up an Application Load Balancer in AWS Elastic Load Balancer by divide t
 9. ReTest <b>Query String Parameter</b>
    - We will add the following URL parameter: /?admin=123456
    - Syntax will be: http://<ELB DNS>/?admin=123456
-   - <b>Result</b>: <b>The Query String which contains admin is blocked by WAF before it could go inside the server</b>(reference: 9-Query String Parameter.png)
+   - <b>Result</b>: <b>The Query String which contains admin is blocked by WAF before it could go inside the server</b>(reference: 9-ReTest Query String Parameter.png)
 
  
     
